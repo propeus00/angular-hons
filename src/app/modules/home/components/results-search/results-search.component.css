@@ -1,0 +1,7 @@
+
+.box-style{
+    border:1px solid rgba(0, 0, 0, 0.192);
+    border-radius: 2px;
+    box-shadow: 2px 2px 4px 0px rgba(255, 0, 0, 0.212);
+    margin:5px;
+  }

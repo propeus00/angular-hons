@@ -1,0 +1,17 @@
+<form #postForm="ngForm" (ngSubmit)="onCreatePost(postForm.value); postForm.reset()" class="text-center">
+    <div class="form-group">
+      <label for="Name">Project name</label>
+      <input ngModel required name="name" type="text" class="form-control" id="Name" aria-describedby="emailHelp" placeholder="Enter project name">
+    </div>
+    <div class="form-group">
+      <label for="Description">Description</label>
+      <input ngModel required name="description" type="text" class="form-control" id="Description" placeholder="Enter description">
+    </div>
+    <div class="form-group">
+        <label for="Username">Username</label>
+        <input ngModel required name="username" type="text" class="form-control" id="Username" placeholder="Enter username">
+        <div class="text-left text-muted"><small>Example James</small></div>
+      </div>
+    
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
