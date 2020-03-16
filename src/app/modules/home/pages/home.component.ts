@@ -18,7 +18,8 @@ export class HomeComponent implements OnInit {
     console.log(input);
     input.preventDefault();
     if (input.key == "Enter") {
-      this.usersArray=[];
+      this.usersArray = [];
+      console.log("use array called");
       this.http
         .get(
           this.proxyurl +
@@ -27,8 +28,10 @@ export class HomeComponent implements OnInit {
         )
         .subscribe(resp => {
           console.log("Response here: ", resp);
+          this.loadedUsersJson = [];
           this.loadedUsersJson.push(resp);
           this.loadedUsersJson[0].map(loadPost => {
+            console.log("Load post ", loadPost);
             this.usersArray.push(loadPost);
           });
           console.log("Users array here: ", this.usersArray);
